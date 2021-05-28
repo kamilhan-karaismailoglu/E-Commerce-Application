@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Odeme">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Margin="0,0,53,0"
+                    Clicked="Button_Clicked_logo" 
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20,15,20,20" BackgroundColor="#F9F9F9">
+                <Label Margin="0,10,0,0" Text="ÖDEME YAP" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Padding="20,10,20,0">
+                <Label Margin="0,10,0,10" TextColor="Black" CharacterSpacing="0.8" Text="Kart Üzerindeki Ad Soyad" FontSize="19"/>
+                <Entry x:Name="entryAdSoyad" Placeholder="Kart Üzerindeki Ad Soyad" BackgroundColor="#F9F9F9" ReturnType="Next"/>
+                <Label Margin="0,20,0,10" TextColor="Black" CharacterSpacing="0.8" Text="Kart Numarası" FontSize="19"/>
+                <Entry x:Name="entryKartNumarası" Placeholder="Kart Numarası" BackgroundColor="#F9F9F9" Keyboard="Numeric" MaxLength="16" ReturnType="Next"/>
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Label VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.8" Margin="0,0,10,0" Text="Son Kullanma Tarihi :" FontSize="19"/>
+                    <Picker x:Name="pickerAy" SelectedIndexChanged="PickerAy_SelectedIndexChanged" WidthRequest="50" BackgroundColor="#F9F9F9" Title="Ay"/>
+                    <Label VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.8" Text="/" FontSize="19"/>
+                    <Picker x:Name="pickerYıl" SelectedIndexChanged="PickerYıl_SelectedIndexChanged" WidthRequest="50" BackgroundColor="#F9F9F9" Title="Yıl"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.8" Margin="0,0,10,0" Text="CVV :" FontSize="19"/>
+                    <Entry x:Name="entryCvv" WidthRequest="50" Placeholder="CVV" MaxLength="4" Keyboard="Numeric" BackgroundColor="#F9F9F9" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,15,0,0">
+                    <Label FontAttributes="Bold" VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.5" Margin="0,0,20,0" Text="TOPLAM SİPARİŞ TUTARI :" FontSize="19"/>
+                    <Label x:Name="lbltoplam" VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.5" Text="0.0" FontSize="19"/>
+                    <Label VerticalOptions="CenterAndExpand" TextColor="Black" CharacterSpacing="0.5" Text="₺" FontSize="19"/>
+                </StackLayout>
+                <Button x:Name="OdemeyiTamamla" Clicked="OdemeyiTamamla_Clicked" Margin="0,0,0,0" BackgroundColor="#B99B6E" TextColor="White" FontAttributes="Bold" FontSize="20" Text="ÖDEMEYİ TAMAMLA"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

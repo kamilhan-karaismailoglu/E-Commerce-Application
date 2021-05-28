@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "577524883624",
+    "firebase_url": "https://hatemoglufirebase-7a308-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "hatemoglufirebase-7a308",
+    "storage_bucket": "hatemoglufirebase-7a308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577524883624:android:1d4925daef7a426f89229d",
+        "android_client_info": {
+          "package_name": "com.companyname.hatemogluapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577524883624-92feql82f1j4oaclk3q93fa64ursh5ls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz_On88a63TaF8rhp-C2YdD6AUhgUGfY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577524883624-92feql82f1j4oaclk3q93fa64ursh5ls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

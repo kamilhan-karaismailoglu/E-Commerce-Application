@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.UyeOl">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"
+                    Command="{Binding LogoCommand}"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"
+                    Command="{Binding SepetCommand}"/>
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout Padding="10,30,10,30" BackgroundColor="#F9F9F9">
+                <StackLayout BackgroundColor="White" HeightRequest="70">
+                    <Label Text="Üye Ol"
+                           FontSize="22"
+                           FontAttributes="Bold"                           
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"                         
+                           TextDecorations="Underline"
+                           TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Margin="0,20,0,0" 
+                             BackgroundColor="White">
+                    <Label Text="Ad"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="name"  
+                           Text="{Binding Name}"
+                           BackgroundColor="#F9F9F9"
+                           Placeholder="Ad"                          
+                           Margin="20,0,20,10"
+                           ReturnType= "Done" 
+                           TabIndex="0"/>
+                    <Label Text="Soyad"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="surname"  
+                           Text="{Binding Surname}"
+                           BackgroundColor="#F9F9F9"
+                           Placeholder="Soyad"                          
+                           Margin="20,0,20,10"
+                           ReturnType="Done"
+                           TabIndex="1"/>
+                    <Label Text="E-Mail"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="mail"  
+                           Text="{Binding Mail}"
+                           BackgroundColor="#F9F9F9"
+                           Placeholder="E-Mail"
+                           Keyboard="Email"
+                           Margin="20,0,20,10"
+                           ReturnType="Done"
+                           TabIndex="2"/>
+                    <Label Text="Cep Telefonu"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="phone"  
+                           Text="{Binding Phone}"
+                           BackgroundColor="#F9F9F9"
+                           Placeholder="5000000000"
+                           MaxLength="10"
+                           Margin="20,0,20,10"
+                           Keyboard="Telephone"
+                           ReturnType="Done"
+                           TabIndex="3"/>
+                    <Label Text="Şifre"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="password"
+                           Text="{Binding Password}"
+                           BackgroundColor="#F9F9F9"
+                           IsPassword="True"
+                           Placeholder="Şifre"                 
+                           Margin="20,0,20,10"
+                           ReturnType="Done"
+                           TabIndex="4"/>
+                    <Label Text="Şifre Tekrar"
+                           TextColor="Black"
+                           Margin="20,20,20,0"
+                           FontSize="20"/>
+                    <Entry x:Name="password2" 
+                           Text="{Binding Password2}"
+                           IsPassword="True"
+                           BackgroundColor="#F9F9F9"
+                           Placeholder="Şifre Tekrar"                 
+                           Margin="20,0,20,10"
+                           TabIndex="5"/>
+                    <StackLayout Margin="20,10,20,30" 
+                                 Orientation="Horizontal">
+                        <CheckBox Color="Black"
+                                  x:Name="sozlesme"
+                                  IsChecked="{Binding SozlesmeIsChecked}"/>
+                        <StackLayout Spacing="0">
+                            <Button VerticalOptions="Center"
+                                    TextColor="Black"
+                                    FontSize="18"
+                                    Text="Üyelik sözleşmesini"                                   
+                                    Command="{Binding SozlesmeCommand}"/>
+                            <Label  Text=" Okudum, Kabul Ediyorum."
+                                    FontSize="20"/>
+                        </StackLayout>
+                    </StackLayout>
+                        <Button Text="KAYDET"
+                                FontSize="22"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                Command="{Binding KaydeButtonCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

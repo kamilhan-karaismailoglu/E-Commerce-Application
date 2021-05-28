@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="HatemogluApp.Views.FiltrelePopup"  
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
+             BackgroundColor="Transparent">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+                      PositionIn="Bottom"  
+                      PositionOut="Bottom"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="300"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"  
+                      HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" Padding="20,0" HorizontalOptions="FillAndExpand" >
+        <Frame Padding="0">
+            <StackLayout Padding="10,0,-18,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label Margin="10,5,0,0" VerticalOptions="Center" Text="FİLTRELE" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                    <Button x:Name="close" Clicked="close_Clicked" Margin="0,5,30,0" HorizontalOptions="EndAndExpand" WidthRequest="40" ImageSource="icon_close.png"/>
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="btn1" Clicked="btn1_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black" Text="FİYAT" WidthRequest="280" />
+                                <Image x:Name="ımg1" Source="icon_down.png" Margin="0,0,40,0"/>
+                            </StackLayout>
+                            <BoxView x:Name="sep1" HeightRequest="1" Margin="10,-10,40,0" BackgroundColor="LightGray"/>
+                        </StackLayout>
+                        <StackLayout Margin="0,0,0,10" x:Name="entries1" Orientation="Horizontal" IsVisible="false">
+                            <Entry Keyboard="Numeric" Margin="40,0,0,0" x:Name="min" Placeholder="Min" WidthRequest="100"/>
+                            <Entry Keyboard="Numeric" Margin="20,0,0,0" x:Name="max" Placeholder="Max" WidthRequest="100"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="btn2" Clicked="btn2_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black" Text="İNDİRİM ORANI (%)" WidthRequest="280" />
+                                <Image x:Name="ımg2" Source="icon_down.png" Margin="0,0,40,0"/>
+                            </StackLayout>
+                            <BoxView x:Name="sep2" HeightRequest="1" Margin="10,-10,40,0" BackgroundColor="LightGray"/>
+                        </StackLayout>
+                        <StackLayout x:Name="entries2" Orientation="Horizontal" IsVisible="false">
+                            <Entry Keyboard="Numeric" Margin="40,0,0,0" x:Name="min2" Placeholder="Min - 0" WidthRequest="100"/>
+                            <Entry Keyboard="Numeric" Margin="20,0,0,0" x:Name="max2" Placeholder="Max - 100" WidthRequest="100"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="btn3" Clicked="btn3_Clicked" HorizontalOptions="StartAndExpand" TextColor="Black" Text="RENK" WidthRequest="280" />
+                                <Image x:Name="ımg3" Source="icon_down.png" Margin="0,0,40,0"/>
+                            </StackLayout>
+                            <BoxView x:Name="sep3" HeightRequest="1" Margin="10,-10,40,0" BackgroundColor="LightGray"/>
+                        </StackLayout>
+                        <StackLayout Margin="25,0,0,10" x:Name="entries3" IsVisible="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="renk1" Text=" Siyah" Clicked="ButtonRenk_Clicked" BackgroundColor="Black" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk2" Text=" Beyaz" Clicked="ButtonRenk_Clicked" BorderColor="Black" BorderWidth="1" BackgroundColor="White" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk3" Text=" Bej" Clicked="ButtonRenk_Clicked" BackgroundColor="#e0e094" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk4" Text=" Kahverengi" Clicked="ButtonRenk_Clicked" BackgroundColor="#654321" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk5" Text=" Gri" Clicked="ButtonRenk_Clicked" BackgroundColor="#9e9e9e" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk6" Text=" Mavi" Clicked="ButtonRenk_Clicked" BackgroundColor="#add8e6" WidthRequest="40" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="renk7" Text=" Haki" Clicked="ButtonRenk_Clicked" BackgroundColor="#69a04c" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk8" Text=" Lila" Clicked="ButtonRenk_Clicked" BackgroundColor="#e3b1d2" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk9" Text=" Kiremit" Clicked="ButtonRenk_Clicked" BackgroundColor="#8a3324" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk10" Text=" Pembe" Clicked="ButtonRenk_Clicked" BackgroundColor="Pink" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk11" Text=" Yeşil" Clicked="ButtonRenk_Clicked" BackgroundColor="LightGreen" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk12" Text=" Vizon" Clicked="ButtonRenk_Clicked" BackgroundColor="#987654" WidthRequest="40" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Button x:Name="renk13" Text=" Turuncu" Clicked="ButtonRenk_Clicked" BackgroundColor="DarkOrange" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk14" Text=" Mor" Clicked="ButtonRenk_Clicked" BackgroundColor="Purple" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk15" Text=" Kırmızı" Clicked="ButtonRenk_Clicked" BackgroundColor="Red" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk16" Text=" Taba" Clicked="ButtonRenk_Clicked" BackgroundColor="#bc5e00" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk17" Text=" Bordo" Clicked="ButtonRenk_Clicked" BackgroundColor="#660000" WidthRequest="40" HeightRequest="40"/>
+                                <Button x:Name="renk18" Text=" Lacivert" Clicked="ButtonRenk_Clicked" BackgroundColor="#120a8f" WidthRequest="40" HeightRequest="40"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Button  x:Name="BtnGo" Clicked="BtnGo_Clicked" BackgroundColor="Black" Margin="0,20,30,0" Text="FİLTREYİ UYGLULA" TextColor="White" />
+                        <Button x:Name="BtnClear" Clicked="BtnClear_Clicked" Text="TÜMÜNÜ TEMİZLE" Margin="0,0,30,10"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage> 

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.TeslimatAdresi">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Margin="0,0,53,0"
+                    Command="{Binding LogoCommand}"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" BackgroundColor="#F9F9F9" HeightRequest="70">
+                    <Label VerticalOptions="CenterAndExpand" Margin="20,0,0,0" FontSize="22" FontAttributes="Bold" TextColor="Black" Text="TESLİMAT ADRESİ"/>
+                </StackLayout>
+                <StackLayout Margin="0,20,0,0" Padding="30,0,30,0" Spacing="5">
+                    <Label  TextColor="Black" CharacterSpacing="1" Text="Adres Başlığı" FontSize="19"/>
+                    <Entry x:Name="EntryBaslık" Text="{Binding EntryBaslık}" ReturnType="Next" Placeholder="Adres Başlığı" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black" CharacterSpacing="1" Text="Ad Soyad" FontSize="19"/>
+                    <Entry x:Name="EntryAdSoyad" Text="{Binding EntryAdSoyad}" ReturnType="Next" Placeholder="Ad Soyad" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black" CharacterSpacing="1" Text="Telefon" FontSize="19"/>
+                    <Entry x:Name="EntryTelefon" Text="{Binding EntryTelefon}" ReturnType="Next" Keyboard="Telephone" MaxLength="10" Placeholder="5000000000" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black" CharacterSpacing="1" Text="Ülke" FontSize="19"/>
+                    <Entry x:Name="EntryUlke" Text="{Binding EntryUlke}" ReturnType="Next" Placeholder="Ülke" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black" CharacterSpacing="1" Text="Şehir" FontSize="19"/>
+                    <Entry x:Name="EntrySehir" Text="{Binding EntrySehir}" ReturnType="Next" Placeholder="Şehir" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black" CharacterSpacing="1" Text="İlçe" FontSize="19"/>
+                    <Entry x:Name="Entryİlce" Text="{Binding Entryİlce}" ReturnType="Next" Placeholder="ilçe" BackgroundColor="#F9F9F9"/>
+                    <Label Margin="0,10,0,0" TextColor="Black"  CharacterSpacing="1" Text="Adres" FontSize="19"/>
+                    <Editor x:Name="EntryAdres" Text="{Binding EntryAdres}" Placeholder="Adres" WidthRequest="20" BackgroundColor="#F9F9F9"/>
+                </StackLayout>
+                <Button x:Name="OzeteGec" Command="{Binding OzeteGecCommand}" Margin="20,20,20,20" BackgroundColor="#B99B6E" Text="SİPARİŞ ÖZETİ" CharacterSpacing="1" FontSize="20" FontAttributes="Bold" TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

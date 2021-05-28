@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Arama"
+             Title="Arama">
+    
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Command="{Binding LogoCommand}"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                     Command="{Binding SepetCommand}"
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="22" TextColor="Black" Text="Arama Sayfası Burada Olacak"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

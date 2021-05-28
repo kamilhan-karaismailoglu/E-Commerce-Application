@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Anasayfa"
+             xmlns:local="clr-namespace:HatemogluApp.Views"
+             Title="Anasayfa">
+    
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Command="{Binding LogoCommand}"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    Command="{Binding SepetCommand}"
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BackgroundColor="#F9F9F9" Margin="0,0,0,10">
+                    <Label Margin="0,20,0,10" Text="YENİ GELENLERİ KEŞFET" TextColor="Black" FontAttributes="bold" FontSize="28" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Button Command="{Binding GomlekCommand}" Margin="0,0,0,20" BackgroundColor="White" ImageSource="anasayfa_gomlekler.jpg" WidthRequest="375" HeightRequest="500"/>
+                <Button  Command="{Binding CeketCommand}" Margin="0,0,0,20" BackgroundColor="White" ImageSource="anasayfa_ceketler.jpg" WidthRequest="375" HeightRequest="500"/>
+                <Button   Command="{Binding TisortCommand}" Margin="0,0,0,20" BackgroundColor="White" ImageSource="anasayfa_tisortler.jpg" WidthRequest="375" HeightRequest="300"/>
+                <Button  Command="{Binding PantolonCommand}" Margin="0,0,0,20" BackgroundColor="White" ImageSource="anasayfa_pantolonlar.jpg" WidthRequest="375" HeightRequest="500"/>
+                <Button  Command="{Binding KazakCommand}" Margin="0,0,0,20" BackgroundColor="White" ImageSource="anasayfa_trikolar.jpg" WidthRequest="375" HeightRequest="500"/>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

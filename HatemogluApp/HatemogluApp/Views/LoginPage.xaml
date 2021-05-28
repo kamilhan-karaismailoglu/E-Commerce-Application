@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Üye Girişi"
+             x:Class="HatemogluApp.Views.LoginPage">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"
+                   Command="{Binding LogoCommand}"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"
+                    Command="{Binding SepetCommand}"/>
+        </StackLayout>
+    </Shell.TitleView>
+   
+    <ContentPage.Content>
+        <StackLayout Padding="10,20,10,10">
+            <Label Text="ÜYE GİRİŞİ" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Start"
+                   FontAttributes="Bold"
+                   FontSize="23"
+                   TextColor="Black"
+                   Margin="0,5,0,10"/>
+            <BoxView  Color="Gray" 
+                      HeightRequest="1"/>
+            <Label Text="E-MAİL"
+                   TextColor="Black"
+                   Margin="20,20,20,0"
+                   FontSize="20"/>
+            <Entry x:Name="mail"
+                   BackgroundColor="#F9F9F9"
+                   Placeholder="E-posta adresiniz"
+                   Margin="20,0,20,10"
+                   Keyboard="Email"
+                   TabIndex="0"
+                   Text="{Binding Email}"/>
+            <Label Text="Şifre"
+                   TextColor="Black"
+                   Margin="20,0,0,0"
+                   FontSize="20"/>
+            <Entry x:Name="password"
+                   BackgroundColor="#F9F9F9"
+                   Placeholder="Şifreniz"
+                   Margin="20,0,20,20"
+                   IsPassword="True"
+                   Text="{Binding Sifre}"/>
+            <Button VerticalOptions="Center" 
+                    Text="GİRİŞ YAP"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    Margin="20,0,20,10"                   
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    x:Name="login"
+                    Command="{Binding LoginCommand}"/>
+            <Label Text="VE YA"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   Margin="20,0,0,10"
+                   FontSize="20"/>
+            <Button VerticalOptions="Center" 
+                    Text="ÜYE OL"
+                    FontSize="22"                  
+                    Margin="20,0,20,10"                  
+                    TextColor="Black"
+                    BackgroundColor="LightGray"
+                    x:Name="register"
+                    Command="{Binding SignUp}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.UrunDetay"
+             Shell.TabBarIsVisible="False">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Clicked="Button_Clicked_logo" 
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    Clicked="Button_Clicked_sepetim" 
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="ImgResim" WidthRequest="300" HeightRequest="400" Grid.Row="0"/>
+                <Label x:Name="title" Grid.Row="1" Margin="20,20,0,0" HorizontalOptions="Start" FontSize="27" TextColor="Black" />
+                    <StackLayout Grid.Row="2">
+                        <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="20,15,20,15"/>
+                        <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+                            <StackLayout Spacing="1" BackgroundColor="#B99B6E" Padding="10">
+                                <Label x:Name="LabelIndirim" FontSize="20" TextColor="White"  Margin="8,0,0,0"/>
+                                <Label Text="İNDİRİM" TextColor="White" FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Margin="15,0,0,0">
+                                <Label x:Name="LabelEskifiyat" TextColor="Gray" FontSize="20" TextDecorations="Strikethrough"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="LabelFiyat" FontAttributes="Bold" FontSize="22" TextColor="Black"/>
+                                    <Label Text="₺" FontAttributes="Bold" FontSize="22" TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <Label Margin="20,15,0,0" Text="BEDEN" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                        <Picker x:Name="BedenPicker" Margin="20,0,20,20" Title="BEDEN SEÇ" SelectedIndexChanged="BedenPicker_SelectedIndexChanged"/>
+                        <Label IsVisible="false" x:Name="SecilenBeden"/>
+                        <Label Margin="20,0,0,0" FontSize="20" TextColor="Black" Text="Ürün Özellikleri"/>
+                        <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="20,10,20,15"/>
+                        <Label Margin="30,0,20,30" FontSize="18" x:Name="LabelOzellikler"/>
+                    </StackLayout>
+                </Grid>
+        </ScrollView>
+        <StackLayout Margin="0,-8,0,0" Padding="15,10,15,10" BackgroundColor="#EFEFEF" Orientation="Horizontal">
+            <StackLayout Spacing="1" BackgroundColor="#B99B6E" Padding="5,5,5,5">
+                <Label x:Name="LabelIndirim2"  FontSize="20" TextColor="White" Margin="8,0,0,0"/>
+                <Label Text="İNDİRİM" TextColor="White" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Margin="15,0,0,0" VerticalOptions="Center">
+                <Label x:Name="LabelEskifiyat2"  TextColor="Gray" TextDecorations="Strikethrough"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="LabelFiyat2" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="₺" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Clicked="Clicked_Sepete_Ekle" HorizontalOptions="EndAndExpand" Text="SEPETE EKLE" TextColor="White" FontSize="18" FontAttributes="Bold" BackgroundColor="#B99B6E" WidthRequest="150"/>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

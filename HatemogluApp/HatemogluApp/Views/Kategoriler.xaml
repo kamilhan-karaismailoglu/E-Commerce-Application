@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Kategoriler">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Command="{Binding LogoCommand}"
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    Command="{Binding SepetCommand}"
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="KATEGORİLER" TextColor="Black" FontSize="22" Margin="20,20,0,10" FontAttributes="Bold"/>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Command="{Binding GomlekCommand}" ImageSource="Gomlek_k.png" Text="GÖMLEKLER" WidthRequest="330" FontSize="18" Background="white"/>
+                <Button Command="{Binding GomlekCommand}" HorizontalOptions="EndAndExpand" ImageSource="icon_ok.png" Background="white"/>
+            </StackLayout>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Command="{Binding KazakCommand}" ImageSource="kazak_k.png" Text="KAZAKLAR" WidthRequest="330" FontSize="18" Background="white"/>
+                <Button Command="{Binding KazakCommand}" HorizontalOptions="EndAndExpand" ImageSource="icon_ok.png" Background="white"/>
+            </StackLayout>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Command="{Binding PantolonCommand}" ImageSource="Pantolon_k.png" Text="PANTOLONLAR" WidthRequest="330"  FontSize="18" Background="white"/>
+                <Button Command="{Binding PantolonCommand}" HorizontalOptions="EndAndExpand" ImageSource="icon_ok.png" Background="white"/>
+            </StackLayout>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Command="{Binding CeketCommand}" ImageSource="Ceket_k.png" Text="CEKETLER" WidthRequest="330"  FontSize="18" Background="white"/>
+                <Button Command="{Binding CeketCommand}" HorizontalOptions="EndAndExpand" ImageSource="icon_ok.png" Background="white"/>
+            </StackLayout>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Command="{Binding TisortCommand}" ImageSource="" Text="TİŞÖRTLER" FontSize="18" WidthRequest="280" Margin="50,0,0,0"  Background="white"/>
+                <Button Command="{Binding TisortCommand}" HorizontalOptions="EndAndExpand" ImageSource="icon_ok.png" Background="white"/>
+            </StackLayout>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

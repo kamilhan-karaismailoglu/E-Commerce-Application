@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Urunler">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button BackgroundColor="White"
+                    Clicked="Button_Clicked_logo" 
+                   ImageSource="logo.png" 
+                   WidthRequest="140" 
+                   HeightRequest="22" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Margin="0,0,53,0" 
+                    BackgroundColor="White" 
+                    Clicked="Button_Clicked_sepetim" 
+                    ImageSource="icon_sepetim1.png" 
+                    WidthRequest="40" HeightRequest="22" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="White" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <CollectionView x:Name="liste" SelectionMode="Single" SelectionChanged="liste_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.Header>
+                    <StackLayout BackgroundColor="#F9F9F9" Padding="20,15,20,15">
+                        <StackLayout HeightRequest="30" HorizontalOptions="Center" Orientation="Horizontal">
+                            <Button x:Name="filtrele" Clicked="filtrele_Clicked" Margin="0,0,0,-10" HorizontalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White" Text="filtrele"/>
+                            <Button x:Name="sıfırla" Clicked="sıfırla_Clicked" Margin="0,0,0,-10"  HorizontalOptions="End" BackgroundColor="Black" TextColor="White" Text="Filtreyi Sıfırla"/>
+                        </StackLayout>
+                        <Label TextDecorations="Underline" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,20,0,0" x:Name="title" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+
+                    </StackLayout>
+
+                </CollectionView.Header>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Resim}" Grid.Row="0" HeightRequest="300" Margin="5,20,5,0"/>
+                            <Label Text="{Binding Baslik}" Grid.Row="1" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="17" FontAttributes="Bold" TextColor="Black" />
+                            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                <StackLayout Spacing="1" BackgroundColor="#B99B6E" Padding="5" Margin="10,0,0,0">
+                                    <Label Text="{Binding Indirim}"  FontSize="18" TextColor="White"  HorizontalTextAlignment="Center"/>
+                                    <Label Text="İNDİRİM" TextColor="White" FontSize="14"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="{Binding Eskifiyat}" TextColor="Gray" FontSize="18" TextDecorations="Strikethrough"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Fiyat}" FontSize="20" TextColor="Black"/>
+                                        <Label Text="₺" FontSize="20" TextColor="Black"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HatemogluApp.Views.Hesap" Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,0">
+            <StackLayout Padding="20,15,10,15" BackgroundColor="#f9f9f9">
+                <Label HorizontalOptions="Start" Text="Üye Girişi" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" TextColor="Black" Text="İsim :" FontSize="22"/>
+                    <Label TextColor="Black" x:Name="Isim" Text="{Binding Isim}" FontSize="22"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" TextColor="Black" Text="Soyisim :" FontSize="22"/>
+                    <Label TextColor="Black" x:Name="soysim" Text="{Binding Soyisim}" FontSize="22"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" TextColor="Black" Text="Email :" FontSize="22"/>
+                    <Label TextColor="Black" x:Name="email" Text="{Binding Email}" FontSize="22"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" TextColor="Black" Text="Telefon :" FontSize="22"/>
+                    <Label TextColor="Black" x:Name="telefon" Text="{Binding Telefon}" FontSize="22"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" TextColor="Black" Text="Şifre :" FontSize="22"/>
+                    <Label TextColor="Black" x:Name="sifre" Text="{Binding Sifre}" FontSize="22"/>
+                </StackLayout>
+                <Button Margin="0,20,0,0" Text="Çıkış Yap" Command="{Binding CikisCommand}" FontSize="22" BackgroundColor="Black" Padding="15" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
