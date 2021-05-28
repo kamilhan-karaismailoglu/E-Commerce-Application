@@ -1,2 +1,2 @@
 # E-Commerce-Applications
-E-commerce Applications made with Xamarin and MVVM Pattern
+E-commerce Application made with Xamarin and MVVM Pattern using Firebase authentication , Firebase realtime database and Sqlite
