@@ -22,10 +22,6 @@ namespace HatemogluApp.Views
         static int RenkSecildi = 0;
         static List<string> SeciliRenkler = new List<string> { };
 
-        public FiltrelePopup()
-        {
-            InitializeComponent();
-        }
         public FiltrelePopup(object gelenliste)
         {
             InitializeComponent();

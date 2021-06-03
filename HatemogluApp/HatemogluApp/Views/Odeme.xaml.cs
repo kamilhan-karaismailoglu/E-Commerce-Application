@@ -15,10 +15,6 @@ namespace HatemogluApp.Views
     {
         static double staticToplam;
         static readonly KrediKartı staticKrediKartı = new KrediKartı { };
-        public Odeme()
-        {
-            InitializeComponent();
-        }
 
         public Odeme(double toplam)
         {
